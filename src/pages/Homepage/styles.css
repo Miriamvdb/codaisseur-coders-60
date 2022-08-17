@@ -3,3 +3,12 @@
   padding: 1rem 3rem;
   border: 1px solid black;
 }
+
+.link-post-details {
+  text-decoration: none;
+  color: black;
+}
+
+.link-post-details:hover {
+  color: tomato;
+}

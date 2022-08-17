@@ -1,6 +1,7 @@
 import moment from "moment";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { selectAllPosts } from "../../store/feed/selectors";
 import { fetchPosts } from "../../store/feed/thunk";
 import "./styles.css";
@@ -23,7 +24,12 @@ const Homepage = () => {
           : allPosts.map((post) => {
               return (
                 <div key={post.id} className="one-post">
-                  <h3>{post.title}</h3>
+                  <NavLink
+                    to={`/post/${post.id}`}
+                    className="link-post-details"
+                  >
+                    <h3>{post.title}</h3>
+                  </NavLink>
                   <p
                     style={{
                       fontSize: "12px",

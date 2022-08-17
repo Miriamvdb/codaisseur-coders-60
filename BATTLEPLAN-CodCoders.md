@@ -2,7 +2,7 @@
 
 ## Homepage
 
-# Display a list of posts by developers
+# [x] Display a list of posts by developers
 
 1. [x] Install Axios: - npm i axios
 2. [x] Install React-Router: - npm i react-router-dom
@@ -59,15 +59,62 @@
     - [x] console.log this data to check if the right data is selected
     - [x] Return list with .map (and pass down props in new component)
 
-# Posts should be ordered by newest to oldest
+## Details
 
-# We should only see 5 posts first
+# [] Display posts by id
 
-# A “load more” button is placed at the bottom of the screen,
+1. [x] Make a page-component to render the post by id (PostDetailspage.js)
+2. [x] Add routes and import page-component
+3. [] Create a new folder in the store:
 
-# Clicking it shows another 5 posts
+   - [] Create slice.js
+   - [] Create thunk.js
+   - [] Create selectors.js
+   - [] Add new slice(sub) in the store(main)
 
-# By clicking on a post, the user should navigate to the Details Page
+4. [] slice.js:
+
+   - [] Create intialState
+   - [] Add loading-case and export
+   - [] Add a new case
+   - [] console.log("Something: ", action)
+   - [] Export action
+
+5. [] thunk.js:
+
+   - [] Import axios
+   - [] Import (../../config/constant) API-URL (when it's the first thunk)
+   - [] Make http GET request with thunk (skeleton)
+   - [] Import actions from slice
+   - [] dispatch(startLoading())
+   - [] dispatch(action(response.data))
+
+6. [] Component-file:
+
+   - [] Import useDispatch and define a const
+   - [] Import useEffect
+   - [] Import thunk from thunk.js
+   - [] Call the function _dispatch(thunk())_ in useEffect
+
+7. [] Check console:
+
+   - [] Check console if the data is there
+   - [] Check console if the action from slice is there
+
+8. [] slice.js:
+
+   - [] Write logic
+   - [] Check Redux DevTools if it's there
+
+9. [] selectors.js:
+
+   - [] Write a selector function
+
+10. [] Component-file:
+
+    - [] Import useSelector, define a const and select data
+    - [] console.log this data to check if the right data is selected
+    - [] Return list with .map (and pass down props in new component)
 
 <!--
 ### Battleplan - Amsterdam GP's
