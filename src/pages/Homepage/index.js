@@ -50,6 +50,19 @@ const Homepage = () => {
                 </div>
               );
             })}
+        {/* 4. Add a button and dispatch the thunk to fetch more data */}
+        <button
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            marginTop: "1rem",
+            marginBottom: "1rem",
+            paddingLeft: "-0rem",
+          }}
+          onClick={() => dispatch(fetchPosts())}
+        >
+          Load more posts..
+        </button>
       </div>
     </div>
   );

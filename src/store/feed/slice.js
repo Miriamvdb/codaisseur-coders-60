@@ -13,9 +13,10 @@ export const feedSlice = createSlice({
       state.loading = true;
     },
 
+    // 3. Modify case to accomodate more posts
     postFetchedSuccess: (state, action) => {
       console.log("Post fetched success: ", action);
-      state.posts = action.payload;
+      state.posts = [...state.posts, ...action.payload];
       state.loading = false;
     },
   },
