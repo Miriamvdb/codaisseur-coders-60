@@ -13,12 +13,13 @@ export const feedSlice = createSlice({
       state.loading = true;
     },
 
-    postFetchedSucces: (state, action) => {
+    postFetchedSuccess: (state, action) => {
       console.log("Post fetched success: ", action);
+      state.posts = action.payload;
       state.loading = false;
     },
   },
 });
 
-export const { startLoading, postFetchedSucces } = feedSlice.actions;
+export const { startLoading, postFetchedSuccess } = feedSlice.actions;
 export default feedSlice.reducer;

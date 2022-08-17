@@ -15,34 +15,49 @@
    - [x] Create selectors.js
    - [x] Add new slice(sub) in the store(main)
 
-6. [] Slice-file:
+6. [x] slice.js:
 
    - [x] Create intialState
    - [x] Add loading-case and export
    - [x] Add a new case
    - [x] console.log("Something: ", action)
    - [x] Export action
-   - [] Write logic
 
-7. [] Thunk-file:
+7. [x] thunk.js:
 
    - [x] Import axios
    - [x] Import (../../config/constant) API-URL (when it's the first thunk)
-   - [] Make http GET request with thunk (skeleton)
-   - [] Import axtion from slice
-   - [] Dispatch the action
+   - [x] Make http GET request with thunk (skeleton)
+   - [x] Import actions from slice
+   - [x] dispatch(startLoading())
+   - [x] dispatch(action(response.data))
 
-8. [] Selectors-file
+8. [x] Component-file:
 
-   - [] Write a selector function
+   - [x] Import useDispatch and define a const
+   - [x] Import useEffect
+   - [x] Import thunk from thunk.js
+   - [x] Call the function _dispatch(thunk())_ in useEffect
 
-9. [] Component-file:
+9. [x] Check console:
 
-   - [] Import useDispatch and define a const
-   - [] Import useSelector, define a const and select data
-   - [] Import useEffect
-   - [] Call the function _dispatch(thunk())_ in useEffect
-   - [] Return list with .map (and pass down props in new component)
+   - [x] Check console if the data is there
+   - [x] Check console if the action from slice is there
+
+10. [x] slice.js:
+
+    - [x] Write logic
+    - [x] Check Redux DevTools if it's there
+
+11. [x] selectors.js:
+
+    - [x] Write a selector function
+
+12. [x] Component-file:
+
+    - [x] Import useSelector, define a const and select data
+    - [x] console.log this data to check if the right data is selected
+    - [x] Return list with .map (and pass down props in new component)
 
 # Posts should be ordered by newest to oldest
 
