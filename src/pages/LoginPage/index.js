@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { login } from "../../store/auth/thunk";
 import "./styles.css";
 
@@ -8,11 +9,13 @@ const LoginPage = () => {
   const [password, setPassword] = useState("miriam");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitLogin = (event) => {
     event.preventDefault();
     console.log("Login cred: ", email, password);
     dispatch(login(email, password));
+    navigate("/");
   };
 
   return (

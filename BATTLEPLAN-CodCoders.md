@@ -190,18 +190,8 @@
     - [x] Check console if the login data is there (thunk.js)
     - [x] Check console if the action is there (slice.js)
 
-11. [] slice.js:
+11. [x] slice.js:
 
-    - [] Write logic to put the received token in the store
+    - [x] Write logic to put the received token in the store
     - [x] Remember to switch the state.loading to false
-    - [] Check Redux DevTools if it's there
-
-12. [] selectors.js:
-
-    - [] Write a selector function
-
-13. [x] Component-file:
-
-    - [x] Import useSelector, define a const and select data
-    - [x] console.log this data to check if the right data is selected
-    - [x] Return list with .map (and pass down props in new component)
+    - [x] Check Redux DevTools if it's there

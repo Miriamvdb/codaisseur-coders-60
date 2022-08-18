@@ -9,8 +9,17 @@ export const login = (email, password) => async (dispatch, getState) => {
       email,
       password,
     });
+
+    const { jwt } = response.data;
     console.log(response.data);
-    dispatch(loggedIn(response.data));
+
+    const profileResponse = await axios.get(`${apiUrl}/me`, {
+      headers: { authorization: `Bearer ${jwt}` },
+    });
+
+    console.log(profileResponse);
+
+    dispatch(loggedIn({ accessToken: jwt, user: profileResponse.data }));
   } catch (e) {
     console.log(e.message);
   }

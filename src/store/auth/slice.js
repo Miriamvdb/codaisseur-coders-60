@@ -15,7 +15,8 @@ export const authSlice = createSlice({
     },
     loggedIn: (state, action) => {
       console.log("Logged in action", action);
-      state.accessToken = action.payload;
+      state.me = action.payload.user;
+      state.accessToken = action.payload.accessToken;
       state.loading = false;
     },
   },
