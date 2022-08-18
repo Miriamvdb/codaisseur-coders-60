@@ -1,5 +1,16 @@
 .container-post-detailspage {
   margin: 3rem;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   border: 1px solid black;
+}
+
+.link-postpage {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.link-postpage:hover {
+  color: tomato;
+  /* font-weight: bold; */
 }

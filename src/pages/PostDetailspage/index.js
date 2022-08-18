@@ -1,7 +1,7 @@
 import moment from "moment";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { selectPostAndComments } from "../../store/postPage/selectors";
 import { fetchPostDetails } from "../../store/postPage/thunk";
 import "./styles.css";
@@ -22,6 +22,9 @@ const PostDetailspage = () => {
 
   return (
     <div className="container-post-detailspage">
+      <NavLink className="link-postpage" to="/">
+        Back
+      </NavLink>
       <h1>{post.title}</h1>
       <p>
         By <b>{post.developer.name}</b> &bull;{" "}
