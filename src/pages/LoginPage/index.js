@@ -14,8 +14,7 @@ const LoginPage = () => {
   const submitLogin = (event) => {
     event.preventDefault();
     console.log("Login cred: ", email, password);
-    dispatch(login(email, password));
-    navigate("/");
+    dispatch(login(email, password, navigate));
   };
 
   return (
