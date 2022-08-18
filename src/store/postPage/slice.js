@@ -17,6 +17,7 @@ export const postPageSlice = createSlice({
       console.log("Post details fetched?", action);
       state.post = action.payload.post;
       state.comments = action.payload.comments;
+      state.loading = false;
     },
   },
 });

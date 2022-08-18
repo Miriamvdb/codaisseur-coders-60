@@ -59,104 +59,61 @@
     - [x] console.log this data to check if the right data is selected
     - [x] Return list with .map (and pass down props in new component)
 
-## Details
+## Detailspage
 
-# [] Display posts by id
+# [x] Display posts by id
 
 1. [x] Make a page-component to render the post by id (PostDetailspage.js)
 2. [x] Add routes and import page-component
-3. [] Create a new folder in the store:
+3. [x] Create a new folder in the store:
 
-   - [] Create slice.js
-   - [] Create thunk.js
-   - [] Create selectors.js
-   - [] Add new slice(sub) in the store(main)
+   - [x] Create slice.js
+   - [x] Create thunk.js
+   - [x] Create selectors.js
+   - [x] Add new slice(sub) in the store(main)
 
-4. [] slice.js:
+4. [x] slice.js:
 
-   - [] Create intialState
-   - [] Add loading-case and export
-   - [] Add a new case
-   - [] console.log("Something: ", action)
-   - [] Export action
+   - [x] Create intialState
+   - [x] Add loading-case and export
+   - [x] Add a new case
+   - [x] console.log("Something: ", action)
+   - [x] Export action
 
-5. [] thunk.js:
+5. [x] thunk.js:
 
-   - [] Import axios
-   - [] Import (../../config/constant) API-URL (when it's the first thunk)
-   - [] Make http GET request with thunk (skeleton)
-   - [] Import actions from slice
-   - [] dispatch(startLoading())
-   - [] dispatch(action(response.data))
+   - [x] Import axios
+   - [x] Import (../../config/constant) API-URL (when it's the first thunk)
+   - [x] Make http GET request with thunk (skeleton)
+   - [x] Pass a parameter (id)
+   - [x] Import actions from slice
+   - [x] dispatch(startLoading())
+   - [x] dispatch(action(response.data))
 
-6. [] Component-file:
+6. [x] Component-file:
 
-   - [] Import useDispatch and define a const
-   - [] Import useEffect
-   - [] Import thunk from thunk.js
-   - [] Call the function _dispatch(thunk())_ in useEffect
+   - [x] Import useParams and define a const to get id from params
+   - [x] Import useDispatch and define a const
+   - [x] Import useEffect
+   - [x] Import thunk from thunk.js
+   - [x] Call the function _dispatch(thunk(id))_ in useEffect
 
-7. [] Check console:
+7. [x] Check console:
 
-   - [] Check console if the data is there
-   - [] Check console if the action from slice is there
+   - [x] Check console if the data is there
+   - [x] Check console if the action from slice is there
 
-8. [] slice.js:
+8. [x] slice.js:
 
-   - [] Write logic
-   - [] Check Redux DevTools if it's there
+   - [x] Write logic
+   - [x] Check Redux DevTools if it's there
 
-9. [] selectors.js:
+9. [x] selectors.js:
 
-   - [] Write a selector function
+   - [x] Write a selector function
 
-10. [] Component-file:
+10. [x] Component-file:
 
-    - [] Import useSelector, define a const and select data
-    - [] console.log this data to check if the right data is selected
-    - [] Return list with .map (and pass down props in new component)
-
-<!--
-### Battleplan - Amsterdam GP's
-
-# Feature 3
-
-- [x] Install Axios: - npm i axios
-- [x] Install React-Router: - npm i react-router-dom
-- [x] Make a page to render the doctorlist (DoctorSchedule.js)
-- [x] Add routes
-- [x] Make a separate component to render each doctor (DoctorTable.js)
-- [x] Import this component (DoctorTable.js)
-- [x] Import useState
-- [x] Define a local state with useState
-- [x] Import axios
-- [x] Import useEffect
-- [x] Make http GET request with useEffect
-- [x] Return doctors with map and pass down props in DoctorTable.js
-
-# Feature 5
-
-- [x] Install Axios: - npm i axios
-- [x] Install React-Router: - npm i react-router-dom
-- [x] Make a page to render the doctorlist (PatientDatabase.js)
-- [x] Add routes
-- [x] Make a separate component to render each doctor (PatientCard.js)
-- [x] Import this component (PatientCard.js)
-- [x] Import useState
-- [x] Define a local state with useState
-- [x] Import axios
-- [x] Import useEffect
-- [x] Make http GET request with useEffect
-- [x] Return patients with map and pass down props in
-
-# Feature 6
-
-- [x] Make a page to render the patient details (PatientDetails.js)
-- [x] Add a route
-- [x] Import useState
-- [x] Define a local state with useState
-- [x] Import axios
-- [x] Import useParams and define a variable
-- [x] Import useEffect
-- [x] Make http GET request with useEffect
-- [x] Return patient (it's an object now), and map over an array in an object if necessary -->
+    - [x] Import useSelector, define a const and select data
+    - [x] console.log this data to check if the right data is selected
+    - [x] Return the list with objects (check the arrays inside objects) || - [x] .map over the list when it's an array
